@@ -1,0 +1,225 @@
+site_name: StashDB Guidelines
+site_url: https://guidelines.stashdb.org
+site_description: A list of guidelines and suggestions for StashDB.org contributors, approved by the community.
+
+repo_name: stashapp/StashDB-Docs
+repo_url: https://github.com/stashapp/StashDB-Docs
+edit_uri: edit/main/docs/
+
+copyright: "Approved by the community driving <a href=\"https://stashdb.org\">StashDB.org</a>"
+
+nav:
+  - Home: index.md
+  - FAQ / Getting Started:
+      - faq_getting-started/index.md
+      - StashDB:
+        - faq_getting-started/stashdb/index.md
+        - Accessing StashDB: faq_getting-started/stashdb/accessing-stashdb.md
+        - Accessing Stash-Boxes: faq_getting-started/stashdb/accessing-stash-boxes.md
+        - Using StashDB: faq_getting-started/stashdb/using-stashdb.md
+        - Contributing to StashDB: faq_getting-started/stashdb/contributing-to-stashdb.md
+        - Joining Discourse and Discord: faq_getting-started/stashdb/joining-discord-and-matrix.md
+        - What is StashDB?: faq_getting-started/stashdb/what-is-stashdb.md
+        - What Makes StashDB Better?: faq_getting-started/stashdb/what-makes-stashdb-better.md
+        - What's a pHash?: faq_getting-started/stashdb/whats-a-phash.md
+        - What's a StashID?: faq_getting-started/stashdb/whats-a-stashid.md
+        - Unconfirmed Guidelines: faq_getting-started/stashdb/unconfirmed-guidelines.md
+        - Guideline Proposals: faq_getting-started/stashdb/guideline-proposals.md
+        - Backlog Spreadsheet: faq_getting-started/stashdb/backlog-spreadsheet.md
+        - Ad Blockers: faq_getting-started/stashdb/ad-blockers.md
+      - Performers:
+        - faq_getting-started/performers/index.md
+        - Ambiguous Performers: faq_getting-started/performers/ambiguous-performers.md
+        - Image Sort Order: faq_getting-started/performers/image-sort-order.md
+        - Performer Edit Comments: faq_getting-started/performers/performer-edit-comments.md
+      - Scenes:
+        - faq_getting-started/scenes/index.md
+        - Duplicate Scenes: faq_getting-started/scenes/duplicate-scenes.md
+        - Check Performers: faq_getting-started/scenes/check-performers.md
+        - Scene Edit Comments: faq_getting-started/scenes/scene-edit-comments.md
+      - Studios: 
+        - faq_getting-started/studios/index.md
+        - Duplicate Studios: faq_getting-started/studios/duplicate-studios.md
+        - Check Image Size: faq_getting-started/studios/check-image-size.md
+        - Studio Edit Comments: faq_getting-started/studios/studio-edit-comments.md
+      - Tags: 
+        - faq_getting-started/tags/index.md
+        - Read Tag Edit Histories: faq_getting-started/tags/read-tag-edit-histories.md
+        - Check Tag Usage: faq_getting-started/tags/check-tag-usage.md
+        - Scraped vs. Manual Tags: faq_getting-started/tags/scraped-vs-manual-tags.md
+        - Sorted vs. Unsorted Tags: faq_getting-started/tags/sorted-vs-unsorted-tags.md
+        - Merging and Destroying Tags: faq_getting-started/tags/merging-and-destroying-tags.md
+        - Tag Edit Comments: faq_getting-started/tags/tag-edit-comments.md
+      - Edits: 
+        - faq_getting-started/edits/index.md
+        - Losing Edit Access: faq_getting-started/edits/moderation-enforcement.md
+        - Updating Edits: faq_getting-started/edits/updating-edits.md
+        - Cancelling Edits: faq_getting-started/edits/cancelling-edits.md
+        - Voting: faq_getting-started/edits/voting.md
+        - Asking for Votes: faq_getting-started/edits/asking-for-votes.md
+        - Edit Comments: faq_getting-started/edits/edit-comments.md
+        - Low Effort Submissions: faq_getting-started/edits/low-effort-submissions.md
+        - Bulk Edits: faq_getting-started/edits/bulk-edits.md
+      - Drafts: 
+        - faq_getting-started/drafts/index.md
+        - Submit from Stash: faq_getting-started/drafts/submit-from-stash.md
+  - Performers:
+    - performers/index.md
+    - Create Performers: 
+      - performers/create/index.md
+      - Eligibility: performers/create/performer-eligibility.md
+    - Edit Performers:
+      - performers/edit/index.md
+      - Name: 
+        - performers/edit/performer-name/index.md
+        - Preferred Name: performers/edit/performer-name/preferred-names.md
+        - JAV Names: performers/edit/performer-name/jav-names.md
+        - Suspicious Names: performers/edit/performer-name/suspicious-names.md
+        - Diatrics in Names: performers/edit/performer-name/diacritics.md
+      - Disambiguation:
+        - performers/edit/disambiguation/index.md
+        - Formatting: performers/edit/disambiguation/disambiguation-formatting.md
+        - Single Names: performers/edit/disambiguation/disambiguating-single-names.md
+      - Aliases:
+        - performers/edit/performer-aliases/index.md
+        - Eligible Aliases: performers/edit/performer-aliases/eligible-aliases.md
+        - Suspicious Aliases: performers/edit/performer-aliases/suspicious-aliases.md
+      - Gender:
+        - performers/edit/gender/index.md
+        - Performer Self-Identity: performers/edit/gender/self-identity.md
+      - Links:
+        - performers/edit/performer-links/index.md 
+        - Personal Links: performers/edit/performer-links/personal-links.md
+      - Images:
+        - performers/edit/performer-images/index.md
+        - Aspect Ratio: performers/edit/performer-images/performer-aspect-ratio.md
+        - Image Size: performers/edit/performer-images/performer-image-size.md
+        - Placeholders: performers/edit/performer-images/performer-placeholder-images.md
+        - Watermarks / Logos: performers/edit/performer-images/performer-watermarks_logos.md
+        - Multiple Performers: performers/edit/performer-images/multi-performer-images.md
+        - Hardcore Images: performers/edit/performer-images/hardcore-performer-images.md
+        - BDSM Images: performers/edit/performer-images/bdsm-performer-images.md
+        - Animated Images: performers/edit/performer-images/animated-performer-images.md
+        - Image Selection: performers/edit/performer-images/performer-image-selection.md
+    - Merge Performers:
+      - performers/merge/index.md
+      - Merge Targets
+      - Set Performance Aliases
+  - Scenes:
+    - scenes/index.md
+    - Create Scenes:
+      - scenes/create/index.md
+      - Duplicates
+      - Re-Releases
+      - PornHub
+      - Full Movies
+      - Split Movies
+    - Edit Scenes: 
+      - scenes/edit/index.md
+      - Title:
+        - scenes/edit/title/index.md
+        - Preferred Titles
+        - Correcting Titles
+        - Preferred Language
+      - Date:
+        - scenes/edit/date/index.md
+        - Preferred Date
+      - Performers:
+        - scenes/edit/performers/index.md
+        - Missing Performers
+        - Ambiguous Performers
+      - Scene Aliases:
+        - scenes/edit/scene-aliases/index.md
+        - Preferred Aliases
+      - Description:
+        - scenes/edit/description/index.md
+        - Preferred Descriptions
+        - Correcting Descriptions
+        - Preferred Language
+      - Tags:
+        - scenes/edit/tags/index.md
+        - Priority Source
+        - Picking Tags
+      - Images:
+        - scenes/edit/images/index.md
+        - Animated Covers
+  - Studios:
+    - studios/index.md
+    - Create Studios:
+      - studios/create/index.md
+    - Edit Studios:
+      - studios/edit/index.md
+  - Tags:
+    - tags/index.md
+  - Changelog: changelog.md
+  - StashDB.org: https://stashdb.org/
+  - Stash on Discord: https://discord.com/channels/559159668438728723
+  - Stash on GitHub: https://github.com/stashapp/stash
+  - Stash-Box on GitHub: https://github.com/stashapp/stash-box
+
+
+draft_docs: |
+  faq_getting-started/search.md
+  faq_getting-started/user.md
+  performers/delete.md
+  scenes/delete.md
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.indexes
+    - navigation.tracking
+    - navigation.sections
+    - toc.follow
+    - navigation.footer    
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      primary: blue grey
+      accent: blue grey
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - abbr
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - footnotes
+  - tables
+  - pymdownx.snippets:
+      auto_append:
+        - includes/invite-code.md
+      url_download: true
+  - toc:
+      permalink: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.saneheaders
+  - pymdownx.keys

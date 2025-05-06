@@ -1,0 +1,29 @@
+$link-color: #48aff0;
+$btn-primary-color: #48aff0;
+$base-button-color: $grey-dk-250;
+$sidebar-color: #394B59;
+$body-background-color: #202B33;
+$body-text-color: #FFFFFF;
+$body-heading-color: #F5F8FA;
+$nav-child-link-color: #E9ECEF;
+$border-color: #808080;
+$table-background-color: #394B59fa;
+$feedback-color: darken($sidebar-color, 3%);
+$search-result-preview-color: darken($body-heading-color, 10%);
+$search-background-color: #394B59fa;
+
+// The following highlight theme is more legible than that used for the light color scheme
+
+@import "./vendor/OneDarkJekyll/syntax"; // this is the one-dark-vivid atom syntax theme
+$code-background-color: #31343f;
+
+// The following appear to be alternate syntax highlighting options
+
+// @import "./vendor/OneDarkJekyll/syntax-one-dark";
+// $code-background-color: #282c34;
+
+// @import "./vendor/OneDarkJekyll/syntax-firewatch";
+// $code-background-color: #282c34;
+
+// @import "./vendor/OneDarkJekyll/syntax-firewatch-green";
+// $code-background-color: #282c34;
