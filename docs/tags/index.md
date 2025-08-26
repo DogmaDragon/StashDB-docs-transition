@@ -1,41 +1,28 @@
 ---
-title: Scene Guidelines
+title: Tag Guidelines
 hide:
 ---
 
-# Scene Guidelines
+# Tag Guidelines
 
-Scene guidelines are sorted into various groups and sub-sections to help editors find all guidelines relating to a particular subject. These categories can be found in two different places, both presented in roughly the same order as they appear within StashDB.
+Tag guidelines are sorted into various groups and sub-sections to help editors find all guidelines relating to a particular subject. These categories can be found in two different places, both presented in roughly the same order as they appear within StashDB.
 
-As long as you remain within the **Scene Guidelines** section of the website, all of these sections will be listed in the sidebar on the left-hand side for quick navigation.
+As long as you remain within the **Tag Guidelines** section of the website, all of these sections will be listed in the sidebar on the left-hand side for quick navigation.
 
-Alternatively, these same categories can be found in the tabbed lists below. The first tab covers guidelines unique to creating and destroying scenes, while the others emulate the tabs within StashDB's edit forms.
+Alternatively, these same categories can be found in the tabbed lists below. The first tab covers guidelines unique to creating, merging, and destroying tags, while the others emulate the tabs within StashDB's edit forms.
 
 === "Generic Actions"
 
     - [Create](generic-actions/create)
+    - [Merge](generic-actions/merge)
     - [Destroy](generic-actions/destroy)
 
 === "Details"
 
-    - [Title](details/title)
-    - [Date](details/date)
-    - [Duration](details/duration)
-    - [Performers](details/performers)
-    - [Studio](details/studio)
-    - [Studio Code](details/studio-code)
-    - [Details](details/details)
-    - [Director](details/director)
-    - [Production Date](details/production-date)
-    - [Tags](details/tags)
-
-=== "Links"
-
-    - [Links](links)
-
-=== "Images"
-
-    - [Images](images)
+    - [Name](details/name)
+    - [Description](details/description)
+    - [Aliases](details/aliases)
+    - [Category](details/category)
 
 ---
 
