@@ -1,0 +1,3428 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A list of guidelines and suggestions for StashDB.org contributors, approved by the community.">
+      
+      
+      
+        <link rel="canonical" href="https://guidelines.stashdb.org/getting-started/editing-stashdb/">
+      
+      
+        <link rel="prev" href="../using-stashdb/">
+      
+      
+        <link rel="next" href="../../guides/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Editing StashDB - StashDB Guidelines</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#editing-stashdb-an-onboarding-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="StashDB Guidelines" class="md-header__button md-logo" aria-label="StashDB Guidelines" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            StashDB Guidelines
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Editing StashDB
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue-grey"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="black"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/stashapp/StashDB-Docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    stashapp/StashDB-Docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guides/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../faq/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  FAQ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../performers/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Performers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../scenes/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Scenes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../studios/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Studios
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tags/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tags
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../edits/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Edits
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../moderation/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Moderation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../changelog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Changelog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://stashdb.org/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  StashDB.org
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="StashDB Guidelines" class="md-nav__button md-logo" aria-label="StashDB Guidelines" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    StashDB Guidelines
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/stashapp/StashDB-Docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    stashapp/StashDB-Docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accessing-stashdb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accessing StashDB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-stashdb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using StashDB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Editing StashDB
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Editing StashDB
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#make-a-stashdb-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make a StashDB Account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-a-discourse-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make a Discourse Account
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Make a Discourse Account">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filling-out-your-discourse-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filling out your Discourse profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements-for-stashdb-editors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements for StashDB editors:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../guides/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/accessing-stash-boxes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accessing Stash-Boxes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/guideline-proposals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guideline Proposals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/joining-discourse-and-discord/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Joining Discourse and Discord
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/submitting-drafts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Submitting Drafts from Stash
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../faq/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            FAQ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../performers/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Performers
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Performers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Generic Actions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Generic Actions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/generic-actions/create/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/generic-actions/merge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Merge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/generic-actions/destroy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Destroy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Personal Information
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Personal Information
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/personal-information/name/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Name
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/personal-information/disambiguation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Disambiguation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/personal-information/aliases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aliases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/personal-information/gender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gender
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/personal-information/birthdate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Birthdate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/personal-information/deathdate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deathdate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/personal-information/eye-color/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Eye Color
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/personal-information/hair-color/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hair Color
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/personal-information/height/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Height
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/personal-information/breast-type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Breast Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/personal-information/measurements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Measurements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/personal-information/nationality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nationality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/personal-information/ethnicity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ethnicity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/personal-information/career-start-end/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Career Start & End
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/tattoos-piercings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tattoos & Piercings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Links
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performers/images/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../scenes/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Scenes
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Scenes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Generic Actions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Generic Actions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenes/generic-actions/create/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenes/generic-actions/destroy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Destroy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Details
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Details
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenes/details/title/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Title
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenes/details/date/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Date
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenes/details/duration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Duration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenes/details/performers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Performers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenes/details/studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Studio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenes/details/studio-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Studio Code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenes/details/details/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Details
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenes/details/director/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Director
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenes/details/production-date.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Production Date
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenes/details/tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenes/links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Links
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenes/images/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../studios/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Studios
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Studios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Generic Actions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Generic Actions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studios/generic-actions/create/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studios/generic-actions/destroy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Destroy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Details
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Details
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studios/details/name/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Name
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studios/details/aliases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aliases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studios/details/network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Network
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studios/links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Links
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studios/images/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tags/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Tags
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Tags
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Generic Actions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Generic Actions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/generic-actions/create/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/generic-actions/merge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Merge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/generic-actions/destroy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Destroy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Details
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Details
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/details/name/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Name
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/details/description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Description
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/details/aliases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aliases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/details/category/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Category
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../edits/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Edits
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Edits
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../moderation/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Moderation
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Moderation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moderation/enforcement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enforcement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://stashdb.org/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    StashDB.org
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#make-a-stashdb-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make a StashDB Account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-a-discourse-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make a Discourse Account
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Make a Discourse Account">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filling-out-your-discourse-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filling out your Discourse profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements-for-stashdb-editors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements for StashDB editors:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="editing-stashdb-an-onboarding-guide">Editing StashDB: An Onboarding Guide<a class="headerlink" href="#editing-stashdb-an-onboarding-guide" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Summary</p>
+<p><strong>Submitting fingerprints is possible with every account but adding/editing anything else requires new permissions, read below for details.</strong></p>
+</div>
+<p>Every StashDB account is able to <a href="{{ site.baseurl }}/docs/faq_getting-started/stashdb/whats-a-phash/">submit fingerprints/hashes</a> from within the <a href="https://docs.stashapp.cc/beginner-guides/guide-to-scraping/#use-the-scene-tagger" target="_blank">Scene Tagger</a> view of Stash. This does not require any additional permissions. However, if you would like to add or edit any scenes/performers/studios, you will need to be granted additional privileges.</p>
+<p>The process for gaining edit access is simple. First, you must read this <strong>entire</strong> article carefully and closely, following <strong>all</strong> of its instructions. Failing to do so could result in the rejection of your application or the loss of edit rights in the future, so take your time. After you finish reading, you must fill out a short application form. </p>
+<p>Typically, the application process takes only 10--15 minutes to complete. That estimate includes reading this entire guide, following all of its instructions, and completing the request form.</p>
+<p>Every request will be reviewed individually by one of StashDB's admins. There will be an opportunity to reapply if your first request is rejected.</p>
+<p>Permissions to create, modify, merge, or destroy tags will require separate permissions. The exact process is still TBD. If you are interested, DM <strong>@AdultSun</strong> for more information.</p>
+<hr />
+<p>{: .warning }
+<strong>Please read the following sections carefully. Failing to follow these instructions may result in delays, rejections, or the loss of future editing privileges.</strong></p>
+<hr />
+<h2 id="make-a-stashdb-account">Make a StashDB Account<a class="headerlink" href="#make-a-stashdb-account" title="Permanent link">&para;</a></h2>
+<p>First, make sure you have an account on <strong>StashDB.org</strong>. It's easy to confuse it with <a href="{{ site.baseurl }}/docs/faq_getting-started/stashdb/accessing-stash-boxes/">other public stash-boxes</a>, but they all require separate accounts. We can't apply the EDIT role to an account that doesn't exist yet. Please see our guide to <a href="{{ site.baseurl }}/docs/faq_getting-started/stashdb/accessing-stashdb/">Accessing StashDB</a> if you need any help finding an invite code, registering an account, or connecting it to Stash.</p>
+<hr />
+<h2 id="make-a-discourse-account">Make a Discourse Account<a class="headerlink" href="#make-a-discourse-account" title="Permanent link">&para;</a></h2>
+<p>All editors are <strong>required to join our Discourse server</strong>. This is the home to Stash's forums and will be the primary method for editors, mods, and admins to communicate with each other. You will also use Discourse to submit your request for edit access. The website can be found here:</p>
+<p><a class="btn btn-blue" href="https://discourse.stashapp.cc/" target="_blank">STASHAPP DISCOURSE</a></p>
+<h3 id="filling-out-your-discourse-profile">Filling out your Discourse profile<a class="headerlink" href="#filling-out-your-discourse-profile" title="Permanent link">&para;</a></h3>
+<p>You will need to fill out your Discourse profile page before requesting edit access. There are a few details and requirements that StashDB editors need to keep in mind, listed in the next section.</p>
+<p>If you're creating a new account, all of these details are part of the initial registration form.</p>
+<p>If you've already created an account, you'll have to dig into your settings to add these details. First, click on your avatar and navigate to <em>Profile</em> &gt; <em>Preferences</em>. You can change your Discourse username under the <em>Account</em> tab. All of the other fields are under the <em>Profile</em> tab.</p>
+<h3 id="requirements-for-stashdb-editors">Requirements for StashDB editors:<a class="headerlink" href="#requirements-for-stashdb-editors" title="Permanent link">&para;</a></h3>
+<ul>
+<li>You must add your <strong>StashDB username</strong> to your Discourse profile.<ul>
+<li>If you want to change your StashDB username, you can ask for a new one within the edit request form. If that's the case, add your new StashDB username to Discourse <strong>before submitting your edit request</strong>.</li>
+</ul>
+</li>
+<li>If you've joined any other public stash-boxes, please add those usernames as well.</li>
+<li>If you've joined the Stash Discord server, please add your <strong>unique username</strong> (not your <strong>server nickname</strong> or <strong>display name</strong>).<ul>
+<li>Editors are <strong>not required</strong> to join Discord.</li>
+<li>Editors are <strong>not required</strong> to "Log in with Discord" or "Connect" Discord to their account.</li>
+</ul>
+</li>
+<li>We recommend that your name on StashDB, Discourse, and Discord all match in order to limit confusion.</li>
+</ul>
+<hr />
+<h1 id="guidelines-summary">Guidelines Summary<a class="headerlink" href="#guidelines-summary" title="Permanent link">&para;</a></h1>
+<p>All editors of StashDB are expected to follow our guidelines to ensure a high level of quality in their submissions. You are <strong>not</strong> expected to memorize all of them right away. However, you <strong>must</strong> be familiar with the following list of guidelines <strong>before submitting your request for edit access</strong>. Read each section closely and carefully --- even if you think the topic is irrelevant to you --- before moving on to the next part of this article. Again, failing to do so could result in the rejection of your application or the loss of edit rights in the future.</p>
+<p>If you'd like to learn more about a particular subject, further information can be found by clicking on the hyperlinks within each section.</p>
+<hr />
+<h2 id="basic-procedure">Basic Procedure<a class="headerlink" href="#basic-procedure" title="Permanent link">&para;</a></h2>
+<h3 id="1-start-slowly">1.) Start slowly.<a class="headerlink" href="#1-start-slowly" title="Permanent link">&para;</a></h3>
+<p>{: .note-title }</p>
+<blockquote>
+<p>Important!</p>
+<p><strong>Do not start by submitting 20+ edits immediately after gaining edit access. Repeated guideline violations and bulk submissions without permission can result in the loss of edit privileges.</strong></p>
+<p>Take your time, try to keep your first submissions simple and small, and leave only a few edits pending at a time. Double-check the guidelines or ask on Discourse/Discord if you have any questions. And <em>always</em> keep an eye on the notifications bell for any comments or downvotes.</p>
+<p>Everything you submit will sit in the edit queue where other editors can review them, voting for either approval or rejection. Everything goes much quicker and smoother when pending edits don't need any corrections. So, be patient and give yourself time to learn the ropes.</p>
+<p>Voting rights will be automatically granted after your 10th approved submission. Read more about the approval process in <a href="{{ site.baseurl }}/docs/faq_getting-started/edits/voting/">Voting on StashDB</a> before voting on anything yourself.</p>
+</blockquote>
+<h3 id="2-use-helpful-edit-comments">2.) Use helpful edit comments.<a class="headerlink" href="#2-use-helpful-edit-comments" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>You will not be able to submit your edit without including a comment first, so make it count. You will be expected to describe where you've sourced your data and explain why your data may be different compared to those sources.</p>
+<p>Fortunately, most edits are relatively straightforward and only use a single source, so there won't be much to explain. Typical comments for these kinds of edits include "scraped from studio" or "male performer from visual ID". For anything more complex, try to be as direct in your explanations as possible to make it easier for voters to parse. You can also use Markdown syntax to better format your comment.</p>
+</blockquote>
+<h3 id="3-update-pending-edits">3.) Update pending edits.<a class="headerlink" href="#3-update-pending-edits" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>If you made a mistake or missed an important piece of information, another editor may downvote your edit and explain why in a comment. These will appear as notifications in the navigation bar across the top of StashDB. When this happens, you are expected to update your edit with the required changes. This will reset the current vote total and notify all commenters and voters of the update.</p>
+</blockquote>
+<hr />
+<h2 id="banned-content">Banned Content<a class="headerlink" href="#banned-content" title="Permanent link">&para;</a></h2>
+<h3 id="1-no-underage-performers">1.) No underage performers.<a class="headerlink" href="#1-no-underage-performers" title="Permanent link">&para;</a></h3>
+<p>{: .note-title }</p>
+<blockquote>
+<p>Important!</p>
+<p><strong>If you see any underage content on StashDB, <a href="https://discourse.stashapp.cc/g/stashdb_admins" target="_blank">please DM the admins immediately</a>.</strong>
+Please use the "Message" button at the top of the page to DM the entire admin group.</p>
+<p>Any content including underage performers will never be allowed on StashDB. We ensure this by only allowing scenes from performers, studios, and platforms that follow age verification laws. These requirements are detailed in <a href="{{ site.baseurl }}/docs/performers/create/performer-eligibility/">Performer Eligibility</a>.</p>
+</blockquote>
+<h3 id="2-no-banned-studios">2.) No banned studios.<a class="headerlink" href="#2-no-banned-studios" title="Permanent link">&para;</a></h3>
+<p>{: .note-title }</p>
+<blockquote>
+<p>Important!</p>
+<p><strong>If you see any underage content on StashDB, <a href="https://discourse.stashapp.cc/g/stashdb_admins" target="_blank">please DM the admins immediately</a>.</strong>
+Please use the "Message" button at the top of the page to DM the entire admin group.</p>
+<p>In rare circumstances, StashDB admins may ban specific studios based on legality and consent. Anything from a studio with a pattern of violating their performers' consent (i.e., Girls Do Porn) is not allowed. All specific bans will be listed under <a href="{{ site.baseurl }}/docs/studios/create/banned-studios/">Banned Studios</a>. This list may expand over time.</p>
+</blockquote>
+<h3 id="3-no-ineligible-performer-aliases">3.) No ineligible performer aliases.<a class="headerlink" href="#3-no-ineligible-performer-aliases" title="Permanent link">&para;</a></h3>
+<p>{: .note-title }</p>
+<blockquote>
+<p>Important!</p>
+<p><strong>If you see any underage content on StashDB, <a href="https://discourse.stashapp.cc/g/stashdb_admins" target="_blank">please DM the admins immediately</a>.</strong>
+Please use the "Message" button at the top of the page to DM the entire admin group.</p>
+<p>All performer names and aliases must be used as an official adult credit in order to be eligible. This means that any legal names or given names cannot be included as an alias just because it is publically known, reported, or even revealed by performers themselves.</p>
+<p>These requirements are explained in more detail in <a href="{{ site.baseurl }}/docs/performers/edit/performer-aliases/eligible-aliases/">Eligible Aliases</a>. To be safe, do not add any <a href="{{ site.baseurl }}/docs/performers/edit/performer-aliases/suspicious-aliases/">Suspicious Aliases</a> that cannot be verified as eligible.</p>
+</blockquote>
+<hr />
+<h2 id="common-mistakes">Common Mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
+<h3 id="1-review-your-drafts">1.) Review your drafts.<a class="headerlink" href="#1-review-your-drafts" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>When you create an edit by clicking the "Submit to Stash-Box" option within Stash, it is not immediately submitted for approval. It is temporarily saved as a "draft" on StashDB and will expire after 24 hours.</p>
+<p>Navigate to your draft in StashDB and make sure everything is accurate and complete before submitting it to the edit queue. Some info saved in Stash might be missing from the draft, and other kinds of data will need to be manually added. Further instructions can be found in <a href="{{ site.baseurl }}/docs/faq_getting-started/drafts/submit-from-stash/#how-to-submit-drafts-from-stash">How to Submit Drafts from Stash</a>.</p>
+<p>Currently, drafts are the only way to add new scenes to StashDB.</p>
+</blockquote>
+<h3 id="2-generate-phashes">2.) Generate pHashes.<a class="headerlink" href="#2-generate-phashes" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Perceptual hashes are the "secret sauce" behind Stash and StashDB. If you submit any scenes to the queue without generating a pHash first, you will need to either resubmit the edit or add your fingerprints after the scene is approved. More info on pHashes and how to generate them can be found in <a href="{{ site.baseurl }}/docs/faq_getting-started/stashdb/whats-a-phash/">What's a pHash?</a>.</p>
+<p>Generating pHashes can take a long time if you have a large collection or slow hardware, so I’ll leave you with a warning while you wait. The application will ask how you learned about StashDB. To make sure you’re paying attention, we will reject any applications that don’t include this phrase in their answer: “I’ve always known about StashDB.” You may still answer honestly if you’d like, but you must include that exact phrase in your response. Remember this before you submit your request and please don’t mention it to anyone without edit access.</p>
+</blockquote>
+<h3 id="3-ineligible-movie-scenes">3.) Ineligible movie scenes.<a class="headerlink" href="#3-ineligible-movie-scenes" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>All scenes must be sourced from a 1st party digital studio. This means any scenes or movies sourced exclusively from a 3rd party retailer for rent or sale (i.e., Adult DVD Empire, Hot Movies, etc.) are not eligible for inclusion on StashDB at this time. That also means physical releases (VHS, DVD, BluRay, etc.) with only 3rd party databases as a source (IAFD, Data18, TPDB, IMDB, etc.) are also not eligible. Requirements for eligibility are explained in more detail for both <a href="{{ site.baseurl }}/docs/scenes/create/full-movie-entries/">Full Movie Entries</a> and <a href="{{ site.baseurl }}/docs/scenes/create/split-movie-scenes/">Split Movie Scenes</a>.</p>
+<p>Please note that some websites act as both 1st party producers and 3rd party retailers simultaneously. In situations where a website acts as both a 1st party producer and a 3rd party retailer, only original content produced by the studio itself is eligible. For example, the only eligible scenes from Bang.com come from the <a href="https://stashdb.org/studios/e653a89f-6794-4243-a748-2d808647d2d3" target="_blank">sub-studios listed under "Bang! Originals"</a>.</p>
+</blockquote>
+<h3 id="4-exceptions-for-amateur-content">4.) Exceptions for amateur content.<a class="headerlink" href="#4-exceptions-for-amateur-content" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>All amateur scenes must use the creator as its studio, not the platform. Also, only certain amateur platforms (ManyVids, Clips4Sale, PornHub, MFC Share, etc.) are allowed. Paywalled subscription services (OnlyFans, Just for Fans, Patreon, etc.) are not allowed. Eligibility for amateur content is explained further in <a href="{{ site.baseurl }}/docs/studios/create/amateur-studios/">Amateur Studios</a>.</p>
+<p>Also note that a single scene entry on StashDB may be used to cover multiple platforms, as explained in <a href="{{ site.baseurl }}/docs/scenes/create/re-releases/">Remasters, Redistributions, and Re-Releases</a>.</p>
+</blockquote>
+<h3 id="5-exceptions-for-jav-content">5.) Exceptions for JAV content.<a class="headerlink" href="#5-exceptions-for-jav-content" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Since JAV is almost exclusively released as full movie downloads, it has been granted an exception under our <a href="{{ site.baseurl }}/docs/scenes/create/full-movie-entries/">Full Movie Entries</a> guideline.</p>
+<p>We also have specific requirements on the formatting of <a href="{{ site.baseurl }}/docs/performers/edit/performer-name/jav-names/">JAV Names</a>.</p>
+</blockquote>
+<h3 id="6-add-or-create-missing-performers">6.) Add or create missing performers.<a class="headerlink" href="#6-add-or-create-missing-performers" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>All performers listed by the studio must be included in your scene submission. This includes male performers in straight scenes. Requirements for performers in scene creation edits are further explained in <a href="{{ site.baseurl }}/docs/scenes/edit/scene-performers/missing-performers/">Missing Performers</a>.</p>
+<p>If the performer does not exist in the database already, they will need to be created <em>before</em> submitting the scene. Identifying uncredited performers is not required but strongly recommended whenever possible.</p>
+</blockquote>
+<h3 id="7-check-for-duplicates-first">7.) Check for duplicates first.<a class="headerlink" href="#7-check-for-duplicates-first" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Duplicate scenes and studios can be much harder to remove than duplicate performers, so please pay extra attention in those areas. The underlying Stash-Box software will automatically warn you of any duplicates based on title/name and fingerprints, but this doesn't catch everything. A quick search with a few carefully chosen keywords only takes a few seconds and could save everyone a lot of wasted time and effort as a result.</p>
+</blockquote>
+<hr />
+<h2 id="moderation-and-enforcement">Moderation and Enforcement<a class="headerlink" href="#moderation-and-enforcement" title="Permanent link">&para;</a></h2>
+<p>{: .note-title }</p>
+<blockquote>
+<p>Important!</p>
+<p><strong>If you see any underage content on StashDB, <a href="https://discourse.stashapp.cc/g/stashdb_admins" target="_blank">please DM the admins immediately</a>.</strong>
+Please use the "Message" button at the top of the page to DM the entire admin group.</p>
+</blockquote>
+<p>At the discretion of the admins, your edit access may be revoked at any time. However, this is rare and usually comes with an official warning first.</p>
+<p>Always act with the best interests of the community in mind. Make your best effort to follow the guidelines, correcting any mistakes when asked. Remain civil and constructive in all communications. If you can do that, you'll be fine.</p>
+<p>Our article explaining <a href="{{ site.baseurl }}/docs/faq_getting-started/edits/moderation-enforcement/">StashDB Moderation Enforcement</a> details what behaviors may result in disciplinary action. It also addresses how and when edit access may be restored.</p>
+<hr />
+<h1 id="submitting-your-request">Submitting Your Request<a class="headerlink" href="#submitting-your-request" title="Permanent link">&para;</a></h1>
+<p>Requesting edit access is not difficult. <strong>After you've read and followed all of the instructions above</strong>, click the button at the bottom of this page. Then, click the "Request" button in the top-right corner. Make sure to fill out the entire form, but please keep your answers brief.</p>
+<p>An admin will review your application shortly, usually within a day or two. You will see their response as a notification within Discourse.</p>
+<p>If you fail to follow <strong>any part</strong> of these instructions, your application may be rejected. If you would like to try again, first re-read this <strong>entire</strong> article closely and carefully. Make sure you follow every instruction to the letter, however insignificant it may seem. You may submit a new request no sooner than 1 hour after your previous rejection.</p>
+<p><a class="btn btn-blue" href="https://discourse.stashapp.cc/g/stashdb_editors" target="_blank">APPLICATION FORM</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../using-stashdb/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using StashDB">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Using StashDB
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../guides/" class="md-footer__link md-footer__link--next" aria-label="Next: Guides">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Guides
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Approved by the community driving <a href="https://stashdb.org">StashDB.org</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.tracking", "navigation.sections", "toc.follow", "navigation.footer"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
