@@ -5,59 +5,62 @@ hide:
 
 # Performer Guidelines
 
-Performer guidelines are sorted into various groups and sub-sections to help editors find all guidelines relating to a particular subject. These categories can be found in two different places, both presented in roughly the same order as they appear within StashDB.
+## Navigation
 
-As long as you remain within the **Performer Guidelines** section of the website, all of these sections will be listed in the sidebar on the left-hand side for quick navigation.
+Performer guidelines are sorted into various groups and sub-sections to help editors find all guidelines relating to a particular subject.
 
-Alternatively, these same categories can be found in the tabbed lists below. The first tab covers guidelines unique to creating, merging, and destroying performers, while the others emulate the tabs within StashDB's edit forms.
+As long as you remain within the **Performer Guidelines** section of the website, all of these sections will be listed in the sidebar on the left-hand side for quick navigation. The first group covers guidelines unique to creating, merging, and destroying performers, while the others emulate the tabs within StashDB's edit forms.
 
-=== "Generic Actions"
+We also have a seperate [FAQ section on performers](/faq/#performers), covering subjects that may not qualify as a discrete guideline.
 
-    - [Create](generic-actions/create)
-    - [Merge](generic-actions/merge)
-    - [Destroy](generic-actions/destroy)
+For guides and guidelines on different topics, the header across the top of the page will take you to other broad categories.
 
-=== "Personal Information"
+## Formatting
 
-    - [Name](personal-information/name)
-    - [Disambiguation](personal-information/disambiguation)
-    - [Aliases](personal-information/aliases)
-    - [Gender](personal-information/gender)
-    - [Birthdate](personal-information/birthdate)
-    - [Deathdate](personal-information/deathdate)
-    - [Eye Color](personal-information/eye-color)
-    - [Hair Color](personal-information/hair-color)
-    - [Height](personal-information/height)
-    - [Breast Type](personal-information/breast-type)
-    - [Measurements](personal-information/measurements)
-    - [Nationality](personal-information/nationality)
-    - [Ethnicity](personal-information/ethnicity)
-    - [Career Start & End](personal-information/career-start-end)
+Each guideline is broken down into the following sections:
 
-=== "Tattoos & Piercings"
+### Guideline
 
-    - [Tattoos & Piercings](tattoos-piercings)
+{==
 
-=== "Links"
+**A single sentence containing a brief explanation.**
 
-    - [Links](links)
+==}
 
-=== "Images"
+!!! tip ""
 
-    - [Images](images)
+    Unconfirmed guideline, subject to change pending formal approval.
 
----
+The short statements highlighted in blue represent the official guideline itself. Changes to its language require an [official approval process](LINKZ) for all confirmed guidelines.
 
-Each guideline starts with a blue callout box styled like this:
+The message inside the green box is sometimes included underneath it. While not officially approved, [unconfirmed guidelines](/faq/#what-are-unconfirmed-guidelines) are written by admins to reflect a well-established consensus. Editors are still expected to follow and enforce them.
 
-!!! abstract ""
+### Explanation
 
-    A single sentence containing a brief explanation.
+These sections represent an overview of the most important information relating to the subject. They define terms, address important considerations, and describe the intent behind each guideline. We try to keep these summaries brief, saving many specifics for the following section, but some guidelines are more complex and require more explanation.
 
-These short statements represent the official guideline itself. Changes to the language within the blue box require an [official approval process](LINKZ) for all confirmed guidelines.
+Explanations are all reviewed (and usually written) by StashDB admins, but changes do not require an official approval process. The language here may be modified at any time to improve clarity or reflect changes in the codebase, shared consensus, moderation practices, etc.
 
-The write-ups below each blue box contain more detailed explanations of the guideline. They provide guidance on how to interpret, apply, and enforce the guideline. These are all approved (and usually written) by StashDB admins, but changes do not require an official approval process. The language here may be modified at any time to improve clarity or reflect changes in the codebase, shared consensus, moderation practices, etc.
+Any notable exceptions will be called out in an orange box at the bottom of this section. Typically these link to a different guideline that takes precedence in certain situations, like this:
 
-[Unconfirmed guidelines](LINKZ) will be marked with their own yellow callout box. While not officially approved, they reflect a well-established consensus and editors are still expected to follow and enforce them.
+!!! warning "Exceptions"
 
-These guidelines are a constant work-in-progress and primarily maintained by admins with many other responsibilities, so some sections may be incomplete, outdated, or empty. If you want to help us improve our documentation, please see [this guide](LINKZ) for more information.
+    - [This scenario]() follows a different set of rules, please see the linked guideline for more details
+
+### Guidance
+
+These final sections provide more in-depth advice on how to interpret, apply, and enforce each guideline. They are often the longest section as well, serving as mini-guides that may include tips and tricks, descriptions of specific edge-cases, or walkthroughs of a suggested workflow.
+
+Just like explanations, guides are all reviewed (and usually written) by StashDB admins, but changes do not require an official approval process.
+
+Often examples will be listed in a gray box at the bottom of the section, like this:
+
+!!! quote "Examples"
+
+    :white_check_mark: **[Correct Example]()**
+    :   - *Brief explanation of why it's correct*
+        - *Correct examples usually link to a real-world example whenever possible*
+     
+    :x: **`Incorrect Example`**
+    :   - *Brief explanation of why it's incorrect*
+        - *Incorrect examples are usually unlinked variations of the good example above it*

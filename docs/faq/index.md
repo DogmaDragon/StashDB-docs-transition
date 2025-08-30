@@ -54,17 +54,124 @@ Be sure to disable your browser's ad-blocker for StashDB's domain, or add the do
 
 ## Editors
 
+### How do I update my pending edit?
+
+{: .important }
+**You can update your own pending edit exactly once, otherwise you may need to cancel and resubmit.**
+
+You can update your own pending edits up to three times. After that, you may need to [cancel the edit]() before resubmitting it to the queue. [Cancelled edits cannot be revived](), so you may need to start over from the beginning.
+
+The "Update Edit" button is only visible when viewing the page dedicated to an individual edit. It is not visible within the edit queue. To find it, click the heading in the top left of the edit card. It should say something like "Create Scene" or "Modify Performer". You should then see a blue "Update Edit" button at the bottom of the page. Clicking that button will take you to the edit form in the same state as the current submission. Just remember to leave an additional [edit comment](LINKZ/faq_getting-started/edits/edit-comments/) explaining your new adjustments before clicking "Submit Edit" again.
+
+Updating your edit will reset all previously cast votes. This means all YES and NO votes will be changed to ABSTAIN. All previous voters will receive a notification within StashDB under default settings, prompting them to review the changes before voting again. The edit's minimum waiting period will also be reset.
+
+Please try to handle any necessary changes with as few updates as possible. Of course, taking the time to get an edit right the first time is even better. Every update slows down the edit queue, especially if you've run out of updates and still need to make more changes. Also, please be aware that abusing the edit system in any way could result in the [removal of edit access](LINKZ/faq_getting-started/edits/moderation-enforcement/#abuse-of-the-edit-system-1). This includes excessive and unnecessary updates.
+
+### How do I cancel my pending edit?
+
+In some situations, you may want to cancel your own pending edit. Perhaps you've already used your [last update](LINKZ/faq_getting-started/edits/updating-edits/) and realize it still needs more work. Maybe it's collected several NO votes and you just don't want an additional rejection on your [User](LINKZ/faq_getting-started/user/) page.
+
+The "Cancel Edit" button is only visible when viewing the page dedicated to an individual edit. It is not visible within the edit queue. To find it, click the heading in the top left of the edit card. It should say something like "Create Scene" or "Modify Performer". You should then see a red "Cancel Edit" button at the bottom of the page.
+
+Take care when cancelling your edit because it [cannot be undone](). If you wish to revive a cancelled edit, you'll need to start from the beginning to recreate it from scratch.
+
+<!--
+### Can I revive a cancelled or rejected edit?
+-->
+
+### When can I vote on somebody else's edits? 
+
+Voting rights will be granted automatically once you have 10 submissions approved. You do not need to request voting access, the Stash-Box system handles it for you. You should see the VOTE role in your user profile after you've been granted permission.
+
+All edit submissions to StashDB will be subject to approval by the votes of other contributors. All editors with voting access are encouraged to occasionally check the [edit queue](https://stashdb.org/edits){:target="_blank"} and spend a little time reviewing and voting on what's there. Voting on more edits than you submit helps reduce the backlog of pending edits, resulting in a smoother experience for everybody.
+
+However, be aware that abusing the voting system in any way could result in the [removal of editing and voting privileges](/moderation/enforcement/#abuse-of-the-voting-system). Click the hyperlink for examples of what may be considered abuse of the system.
+
+[Asking for votes on Discord](LINKZ/faq_getting-started/edits/asking-for-votes/) in order to speed up the approval process is only recommended in specific situations.
+
+### How many votes approves or rejects an edit?
+
+Different voting thresholds apply to destructive vs. non-destructive edits.
+
+Edits considered ***non-destructive*** may be approved immediately if they receive three unanimous YES votes. They may also be rejected immediately with three unanimous NO votes. Waiting periods are only required when there are less than 3 votes or when the vote is non-unanimous. This may be 3 days or 7 days, depending on the current vote total. Net totals of 0 votes will be ***approved*** at the end of the waiting period for non-destructive edits.
+
+***Destructive edits*** (Merge and Destroy requests, mostly) always require a minimum waiting period to pass before it is approved or rejected. This may be 3 days or 7 days, depending on the current vote total. Net totals of 0 votes will be ***rejected*** for destructive edits.
+
+However, [updating an edit]() will reset the waiting period and the vote total. Please see the linked FAQ entry for more details.
+
+To check the status of a particular edit, let your cursor hover over "Voting closes in X days" in the top right corner of the edit card. It will show you — based on the current vote total — the exact date and time the voting period will end. It will also say whether the edit will be rejected or approved with the current vote total.
+
+### What does the ABSTAIN vote do?
+
+The ABSTAIN option is offered as an alternative to voting YES or NO on an edit. Originally it was used to remove a YES or NO vote for when you've made a mistake or changed your mind. It does not affect the edit's vote total.
+
+The ABSTAIN vote does affect the edit queue's "Voted" filter, presented as a dropdown menu at the top of the page. Some editors like to use the "Not Yet Voted" option to maintain a clean list of pending edits, voting ABSTAIN to hide submissions they have no intention of upvoting or downvoting. Others will use the same filter to only view ABSTAIN votes, saving edits to review later as they work through the queue.
+
+However, be aware that any edit you've voted ABSTAIN on will start triggering notifications under default settings after every update or comment it receives. This could be useful if you'd like to watch an edit before voting YES or NO, but it could also result in a lot of unwanted notifications if you only want to hide them using the "Not Yet Voted" filter.
+
+Finally, any previous YES or NO votes on an [updated edit]() will be reverted to ABSTAIN. This is used to reset the vote total after a pending edit is changed. By default, this will also trigger a notification within StashDB, prompting voters to review the changes before voting again.
+
 ### What are "unconfirmed" guidelines?
 
 Many of this guidelines on this website will include the following message:
 
-!!! warning ""
+!!! tip ""
 
     Unconfirmed guideline, subject to change pending formal approval.
 
 This just means the language has not been formally approved yet. Instead, each one represents a working consensus developed organically between contributors over time.
 
-Contributors are still expected to follow and enforce these unconfirmed guidelines, but should know that they are subject to change in the near future. Continually violating them may still result in the [removal of edit access]({{ site.baseurl }}/docs/faq_getting-started/edits/moderation-enforcement/).
+Editors are still expected to follow and enforce these unconfirmed guidelines, but should know that they are subject to change in the near future. Continually violating them may still result in the [removal of edit access](LINKZ/faq_getting-started/edits/moderation-enforcement/).
+
+### Why are guidelines written that way?
+
+Each guideline is broken down into the following sections:
+
+#### Guideline
+
+{==
+
+**A single sentence containing a brief explanation.**
+
+==}
+
+!!! tip ""
+
+    Unconfirmed guideline, subject to change pending formal approval.
+
+The short statements highlighted in blue represent the official guideline itself. Changes to its language require an [official approval process](LINKZ) for all confirmed guidelines.
+
+The message inside the green box is sometimes included underneath it. While not officially approved, [unconfirmed guidelines](/faq/#what-are-unconfirmed-guidelines) are written by admins to reflect a well-established consensus. Editors are still expected to follow and enforce them.
+
+#### Explanation
+
+These sections represent an overview of the most important information relating to the subject. They define terms, address important considerations, and describe the intent behind each guideline. We try to keep these summaries brief, saving many specifics for the following section, but some guidelines are more complex and require more explanation.
+
+Explanations are all reviewed (and usually written) by StashDB admins, but changes do not require an official approval process. The language here may be modified at any time to improve clarity or reflect changes in the codebase, shared consensus, moderation practices, etc.
+
+Any notable exceptions will be called out in an orange box at the bottom of this section. Typically these link to a different guideline that takes precedence in certain situations, like this:
+
+!!! warning "Exceptions"
+
+    - [This scenario]() follows a different set of rules, please see the linked guideline for more details
+
+#### Guidance
+
+These final sections provide more in-depth advice on how to interpret, apply, and enforce each guideline. They are often the longest section as well, serving as mini-guides that may include tips and tricks, descriptions of specific edge-cases, or walkthroughs of a suggested workflow.
+
+Just like explanations, guides are all reviewed (and usually written) by StashDB admins, but changes do not require an official approval process.
+
+Often examples will be listed in a gray box at the bottom of the section, like this:
+
+!!! quote "Examples"
+
+    :white_check_mark: **[Correct Example]()**
+    :   - *Brief explanation of why it's correct*
+        - *Correct examples usually link to a real-world example whenever possible*
+     
+    :x: **`Incorrect Example`**
+    :   - *Brief explanation of why it's incorrect*
+        - *Incorrect examples are usually unlinked variations of the good example above it*
 
 ---
 
